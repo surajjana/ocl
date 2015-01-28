@@ -1,7 +1,7 @@
 /**
   * Program : Implementation of Single Pad Cryptography Algorithm
   * Developer : Suraj Kumar Jana
-  * Comapny : Opencube Labs
+  * Company : Opencube Labs
 **/
 
 
