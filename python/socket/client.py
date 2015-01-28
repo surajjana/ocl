@@ -7,5 +7,8 @@ host = '127.0.0.0' # Get local machine name
 port = 12350                # Reserve a port for your service.
 
 s.connect((host, port))
-print s.recv(1024)
+
+while True:
+	print ">>",s.recv(1024)
+	s.send
 s.close                     # Close the socket when done
