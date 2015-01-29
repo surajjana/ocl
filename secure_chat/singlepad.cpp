@@ -8,6 +8,7 @@
 #include<iostream>
 #include<cstring>
 #include<bitset>
+#include<fstream>
 
 using namespace std;
 
@@ -20,6 +21,8 @@ int main(int argc,char* argv[])
 {
 	char input[50],key[8],msg[50],msg1[50];
 	int i=0,len;
+	ofstream ofile;
+	ofile.open("data.txt");
 	//cout<<"Enter Key : ";
 	//cin.getline(key,8);
 	//cout<<"\n\n";
@@ -37,9 +40,11 @@ int main(int argc,char* argv[])
 		msg1[i] = singlepad(msg[i]); 
 	}
 	//cout<<i<<"\n";
-	cout<<"Secret Message : "<<msg<<"\n";
-	cout<<"Decrypted Message : "<<msg1;
-	cout<<"\n";
+	ofile<<msg;
+	ofile.close();
+	//cout<<"Secret Message : "<<msg<<"\n";
+	//cout<<"Decrypted Message : "<<msg1;
+	//cout<<"\n";
 	return 0;
 }
 
