@@ -4,7 +4,7 @@ import socket               # Import socket module
 
 s = socket.socket()         # Create a socket object
 host = '10.42.0.1' # Get local machine name
-port = 12352                # Reserve a port for your service.
+port = 12368                # Reserve a port for your service.
 s.bind((host, port))        # Bind to the port
 
 s.listen(5)   

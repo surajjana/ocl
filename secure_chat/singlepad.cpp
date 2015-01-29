@@ -1,7 +1,7 @@
 /**
   * Program : Implementation of Single Pad Cryptography Algorithm
   * Developer : Suraj Kumar Jana
-  * Company : Opencube Labs
+  * Comapny : Opencube Labs
 **/
 
 
@@ -16,17 +16,18 @@ int xor_fn(int a,int b);
 
 int key[] = {0,0,1,0,0,0,0,1};
 
-int main()
+int main(int argc,char* argv[])
 {
 	char input[50],key[8],msg[50],msg1[50];
 	int i=0,len;
 	//cout<<"Enter Key : ";
 	//cin.getline(key,8);
 	//cout<<"\n\n";
-	cout<<"Enter a string : ";
-	cin.getline(input,50);
+	//cout<<"Enter a string : ";
+	//cin.getline(input,50);
+	strcpy(input,argv[1]);
 	len = strlen(input);
-	cout<<len<<"\n";
+	//cout<<len<<"\n";
 	for(i=0;i<len;i++)
 	{
 		msg[i] = singlepad(input[i]);
@@ -35,7 +36,7 @@ int main()
 	{
 		msg1[i] = singlepad(msg[i]); 
 	}
-	cout<<i<<"\n";
+	//cout<<i<<"\n";
 	cout<<"Secret Message : "<<msg<<"\n";
 	cout<<"Decrypted Message : "<<msg1;
 	cout<<"\n";
